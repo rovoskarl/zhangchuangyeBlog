@@ -3,7 +3,14 @@
 
     <url>
         <loc>http://www.zhangcy.club/tags/Hexo/</loc>
-        <lastmod>2018-12-06T06:33:29.503Z</lastmod>
+        <lastmod>2018-12-06T09:14:36.097Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.zhangcy.club/tags/aa/</loc>
+        <lastmod>2018-12-06T09:17:17.333Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
