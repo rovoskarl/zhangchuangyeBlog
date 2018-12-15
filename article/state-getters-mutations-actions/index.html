@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          [随笔]总得写点什么 - 张创业 | Blog
+          [WEB技术]vuex所有核心概念完整解析State Getters Mutations Actions - 张创业 | Blog
         
     </title>
 
-    <link rel="canonical" href="http://www.zhangcy.club/article/something-has-to-be-written/">
+    <link rel="canonical" href="http://www.zhangcy.club/article/state-getters-mutations-actions/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -86,14 +86,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#随笔" title="随笔">随笔</a>
+                              <a class="tag" href="/tags/#WEB技术" title="WEB技术">WEB技术</a>
                             
                         </div>
-                        <h1>[随笔]总得写点什么</h1>
-                        <h2 class="subheading">随笔</h2>
+                        <h1>[WEB技术]vuex所有核心概念完整解析State Getters Mutations Actions</h1>
+                        <h2 class="subheading">WEB技术</h2>
                         <span class="meta">
                             Posted by 张创业 on
-                            2018-12-07
+                            2018-12-15
                         </span>
                     </div>
                 
@@ -210,32 +210,53 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="总得写点什么">总得写点什么</h2>
-<p>好像每一个拥有技术博客的人一般会在开篇写一篇关于为什么自己要建一个技术博客。就好比程序员在学一门新的语言，第一段代码总要写一个Hello World，以表示对这世界的尊重。</p>
-<p>​　　距离我创建独立域名的博客已经一年了，那时候还选择在10月24号这个程序员特殊的节日发布，并发表朋友圈说自己拥有了一个独立的自居地，可以写点技术文章或关于心情的东西，算是把自己“开源”出去了。然后一年的时间，技术的文章倒是写不少，关于心情的东西则一直不太想写，毕竟骨子里可能还是一个封闭的人，不太想把自己内心真实的想法公开出来，因为这些关于心情的文字，于自己于他人都不一定有什么好处，可能还给自己带来压力。</p>
-<p>​　　慢慢地，心态有了一些变化，不知道是好还是坏，想想还是写些回顾和思考，不用在乎那么多，或许本来也不必要在乎那么多。至于为什么要创建独立域名的博客，最早也并没有什么计划，而是把我之前写的一些学习笔记从个人笔记里面开放到外面出来。当个人学习笔记只有自己看的时候总会写的很随意，没什么条理。好比当你一个人在家的时候，总是不太喜欢收拾东西，乱七八糟的东西随便放，当有人要来你家的时候，则会提前把房间收拾得干干净净。于是，我先把学习笔记放到了CSDN上，后来在无意中看到了还有Github Page这种东西，就开始瞎折腾了。本来应该是先选技术再选主题，而我是先选主题再选技术，最后选出了一个自己认为比较好看的主题，最后就用了Hexo这种搭建框架。毕竟这还是一个看脸的世界！从知道到瞎折腾，到最后有一个独立的个人域名 www.zhangcy.club ，到个人博客浏览量不断上升，这中间花了很多很多的时间。学习不懂的东西总是这样，一开始觉得很牛逼，等到自己投入一定的精力后，并慢慢搞懂，想想也不过如此，然后好像就可以开始装逼了。</p>
-<p>​　　花费了这么多时间和精力，对我个人来说是否有什么影响，应该是说找到了一种比较笨的学习方式。写博客是很耗时间的，需要将你学习到的东西通过自己认为比较简练的语言归纳整理，并且有条理或系统地去让别人更容易读懂，在这过程中自己的总结归纳能力等可以得到锻炼，而有的知识你以为懂了，当要写出来的时候会发现好像还没懂，这时候也可以再去思考这个知识。当形成了自己的知识体系后，即时你哪天忘记了你写的内容，也可以很快的找到答案所在的地方。就好比开卷考试，当你记不住答案或者也不一定要记住答案是什么，只需要知道在哪里可以快速找到答案就够了。如果可以快速有效地解决问题，也不一定要关心你是怎么解决的。当你学的东西越来越多，你会发现你不懂的也越来越多，好比一个圆，圆内的面积越大，圆外接触的不懂的东西也越多。</p>
-<p>​　　写博客不难，难的是坚持下去。毕竟这要花挺多时间，你也可能因为写错，或者写的太low，被别人批评，写的东西没人看而带来各种压力。这时候想想你为什么写博客，或许就不会有太多的压力了。这边也推荐一篇最近刚好看到的文章：为什么你应该（从现在开始就）写博客。</p>
-<p>​　　再到后来，慢慢有了要打造个人品牌的想法，就是不断扩大你在某个知识领域的影响力，把自己销售出去。现在，在百度或谷歌搜索我的名字“张创业”三个字，第一条记录便是我的独立域名博客。当然个人品牌并不仅仅做博客这么简单，你做的所有事，获得的所有信任都会慢慢累积你的个人品牌，这是一个很漫长很艰难的过程，当最后有一天你的名字就是你的简历的时候，差不多也就完成目标了。而在这方面，想提起的一个人便是陆奇。</p>
-<p>​　　假如陆奇去面试，发生以下对话:</p>
-<p>​　　面试官问：嗯，你叫陆奇是吧，先做个一分钟的自我介绍吧，然后你上一份工作是工作了一年多就离职，好像不太稳定啊，可以说说为什么吗？</p>
-<p>​　　陆奇：…</p>
-<p>​　　（画外音：不好意思，面试官，您浪费了陆先生一分钟的时间，按照市场价您需要为这一分钟支付xxx美金，请问您是现金还是转账呢？）</p>
-<p>​　　当然，这是一个段子。而我们要知道的是，当你的能力真的可以达到陆奇那种程度的时候，其实就陆奇这两个字就已经很有价值和说服力了。而那时候你的时间可能就很值钱了，毕竟时间也是一种成本，而且是一种花掉就再也拿不回来的成本，也存在通货膨胀和通货紧缩。以前听说有的投资者做投资的时候是只投人不投项目，即看准了这个人，相信他的能力，相信他选择和做的项目，无论是什么项目都能成功，或者这次没有成功，下次，下下次也能成功，对这个人来说，只是时间问题。而只要有一次成功，回报就足以覆盖之前的失败。王兴可能就是这样的一个例子，曾经的校内网，饭否，和如今的美团。当然事后诸葛亮人人都会，谁知道贾跃亭是不是这样的人。所以真正厉害的可能还是那个看人的本领，这个人是否足够聪明，足够踏实，足够坚韧。</p>
-<p>​　　很多事情并不是你想做就可以做到的，而最难的是选择做什么，或称之为“做与不做”的问题，其次才是怎么去做。不同人可能都生活在一个自带加速度的成长环境中，有的人加速度为正，有的人加速度为负。当你在追赶一个加速度为正的人的时候，从一步落后可能就再无擦肩而过的机会了，你只能希望不要被越拉越远，或者可以有幸捡到一支98K和8倍镜，远远地将他“干掉”。</p>
-<p>​　　　物竞天择，适者生存。成者为王，败者为寇！人类来源于自然，多少还是会带来自然法则。这十六个字就当做自勉吧！</p>
-<p>​　　​　　　　　　　　　　　　　​　　​　　　　　　　　　　———于2018年12月07日</p>
-
+                <p>vuex是解决vue组件和组件间相互通信而存在的，vuex理解起来稍微复杂，但一旦看懂则即为好用：</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save vuex</span><br></pre></td></tr></table></figure>
+<p>引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Vuex from &apos;vuex&apos;</span><br><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">Vue.use(Vuex)</span><br></pre></td></tr></table></figure>
+<p>vuex的几个参数的介绍</p>
+<p>State：储存初始化数据</p>
+<p>Getters：对State 里面的数据二次处理（对数据进行过滤类似filter的作用）比如State返回的为一个对象，我们想取对象中一个键的值用这个方法</p>
+<p>Mutations：对数据进行计算的方法全部写在里面（类似computed） 在页面中触发时使用this.$store.commit(‘mutationName’) 触发Mutations方法改变state的值</p>
+<p>Actions：处理Mutations中已经写好的方法 其直接触发方式是 this.$store.dispatch(actionName)</p>
+<p>我们先不急着了解更多先打印下Vuex</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">console.log(Vuex) //Vuex为一个对象里面包含</span><br><span class="line">Vuex =&#123;</span><br><span class="line">    Store:function Store()&#123;&#125;,    </span><br><span class="line">    mapActions:function()&#123;&#125;,    // 对应Actions的结果集</span><br><span class="line">    mapGetters:function()&#123;&#125;,    //对应Getters的结果集</span><br><span class="line">    mapMutations:function()&#123;&#125;,  //对应Mutations的结果集</span><br><span class="line">    mapState:function()&#123;&#125;,      //对应State的结果集</span><br><span class="line">    install:function install()&#123;&#125;, //暂时不做讲解 </span><br><span class="line">    installed:true //暂时不做讲解</span><br><span class="line">&#125;</span><br><span class="line">//如果我们只需要里面的State时我们可以这样写</span><br><span class="line">import &#123; mapState &#125; from &apos;vuex&apos;;</span><br><span class="line">import &#123; mapGetters, mapMutations &#125; from &apos;vuex&apos;; //如果需要引用多个时用这种方式处理</span><br></pre></td></tr></table></figure>
+<p>反复看上面的内容是不是就豁然开朗了接下来我们进行依次举例和用官方的语言描述</p>
+<p>State</p>
+<p>State负责存储整个应用的状态数据，一般需要在使用的时候在跟节点注入store对象，后期就可以使用this.$store.state直接获取状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//store为实例化生成的</span><br><span class="line">import store from &apos;./store&apos; </span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  store,</span><br><span class="line">  render: h =&gt; h(App)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>这个store可以理解为一个容器，包含着应用中的state等。实例化生成store的过程是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//./store文件</span><br><span class="line">const store = new Vuex.Store(&#123;</span><br><span class="line">  state: &#123;   //放置state的值</span><br><span class="line">    count: 0,</span><br><span class="line">    strLength:&quot;abcd234&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  getters: &#123;   //放置getters方法</span><br><span class="line">      strLength: state =&gt; state.aString.length</span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;   //放置mutations方法</span><br><span class="line">       mutationName(state) &#123;</span><br><span class="line">          //在这里改变state中的数据</span><br><span class="line">          state.count = 100;</span><br><span class="line">       &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 异步的数据操作</span><br><span class="line">  actions: &#123;      //放置actions方法</span><br><span class="line">       actionName(&#123; commit &#125;) &#123;</span><br><span class="line">          //dosomething</span><br><span class="line">         commit(&apos;mutationName&apos;)</span><br><span class="line">      &#125;,</span><br><span class="line">      getSong (&#123;commit&#125;, id) &#123;</span><br><span class="line">          api.getMusicUrlResource(id).then(res =&gt; &#123;</span><br><span class="line">            let url = res.data.data[0].url;</span><br><span class="line">        </span><br><span class="line">          &#125;)</span><br><span class="line">          .catch((error) =&gt; &#123;  // 错误处理</span><br><span class="line">              console.log(error);</span><br><span class="line">          &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">export default store;</span><br></pre></td></tr></table></figure>
+<p>后续在组件中使用的过程中，如果想要获取对应的状态你就可以直接使用this.$store.state获取，当然，也可以利用vuex提供的mapState辅助函数将state映射到计算属性中去，如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import &#123;mapState&#125; from &apos;vuex&apos;</span><br><span class="line"></span><br><span class="line">export default &#123;  //组件中</span><br><span class="line">  computed: mapState(&#123;</span><br><span class="line">    count: state =&gt; state.count</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Getters</p>
+<p>有些状态需要做二次处理，就可以使用getters。通过this.$store.getters.valueName对派生出来的状态进行访问。或者直接使用辅助函数mapGetters将其映射到本地计算属性中去。</p>
+<p>在组件中使用方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import &#123;mapGetters&#125; from &apos;vuex&apos;</span><br><span class="line"></span><br><span class="line">export default &#123;  </span><br><span class="line">computed: mapGetters([</span><br><span class="line">&apos;strLength&apos;</span><br><span class="line">])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Mutations</p>
+<p>Mutations的中文意思是“变化”，利用它可以更改状态，本质就是用来处理数据的函数，其接收唯一参数值state。store.commit(mutationName)是用来触发一个mutation的方法。需要记住的是，定义的mutation必须是同步函数，否则devtool中的数据将可能出现问题，使状态改变变得难以跟踪。</p>
+<p>在组件中触发：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">复制代码</span><br><span class="line">export default &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handleClick() &#123;</span><br><span class="line">      this.$store.commit(&apos;mutationName&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者使用辅助函数mapMutations直接将触发函数映射到methods上，这样就能在元素事件绑定上直接使用了。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import &#123;mapMutations&#125; from &apos;vuex&apos;</span><br><span class="line">export default &#123;</span><br><span class="line">  methods: mapMutations([</span><br><span class="line">    &apos;mutationName&apos;</span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Actions</p>
+<p>Actions也可以用于改变状态，不过是通过触发mutation实现的，重要的是可以包含异步操作。其辅助函数是mapActions与mapMutations类似，也是绑定在组件的methods上的。如果选择直接触发的话，使用this.$store.dispatch(actionName)方法。</p>
+<p>在组件中使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import &#123;mapActions&#125; from &apos;vuex&apos;</span><br><span class="line">//我是一个组件</span><br><span class="line">export default &#123;</span><br><span class="line">  methods: mapActions([</span><br><span class="line">    &apos;actionName&apos;,</span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Plugins</p>
+<p>插件就是一个钩子函数，在初始化store的时候引入即可。比较常用的是内置的logger插件，用于作为调试使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//写在./store文件中</span><br><span class="line">import createLogger from &apos;vuex/dist/logger&apos;</span><br><span class="line">const store = Vuex.Store(&#123;</span><br><span class="line">  ...</span><br><span class="line">  plugins: [createLogger()]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/article/浏览器中常见网络协议介绍/" data-toggle="tooltip" data-placement="top" title="[WEB技术]浏览器中常见网络协议介绍">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/article/浏览器中常见网络协议介绍/" data-toggle="tooltip" data-placement="top" title="[WEB技术]浏览器中常见网络协议介绍">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -275,7 +296,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#总得写点什么"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x603B;&#x5F97;&#x5199;&#x70B9;&#x4EC0;&#x4E48;</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -295,7 +316,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#随笔" title="随笔">随笔</a>
+                          <a class="tag" href="/tags/#WEB技术" title="WEB技术">WEB技术</a>
                         
                     </div>
                 </section>
