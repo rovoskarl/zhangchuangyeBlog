@@ -1,0 +1,97 @@
+/* Animations with keyframes */
+@-webkit-keyframes x_rot {
+    0%    { -webkit-transform: rotateX(-30deg); }
+    50%   { -webkit-transform: rotateX(30deg); }
+    100%  { -webkit-transform: rotateX(-30deg); }
+}
+@-webkit-keyframes y_rot {
+    0%    { -webkit-transform: rotateY(0deg); }
+    50%   { -webkit-transform: rotateY(180deg); }
+    100%  { -webkit-transform: rotateY(360deg); }
+}
+
+/* main styles */
+.slider {
+    margin: 250px auto;
+
+    -webkit-perspective: 1000; /* setup perspective to parent */
+}
+.x_rot {
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-name: x_rot; /* setup custom animations */
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+}
+.y_rot {
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-name: y_rot; /* setup custom animations */
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+.y_rot div {
+    color: rgba(0,0,0,0.9);
+    height: 235px;
+    left: 300px;
+    opacity: 0.8;
+    position: absolute;
+    width: 235px;
+
+    -webkit-border-radius: 15px;
+    -webkit-transition: .3s;
+}
+.y_rot div#i1 {
+    -webkit-transform: rotateY(0deg) translateZ(200px);
+}
+.y_rot div#i2 {
+    -webkit-transform: rotateY(60deg) translateZ(200px);
+}
+.y_rot div#i3 {
+    -webkit-transform: rotateY(120deg) translateZ(200px);
+}
+.y_rot div#i4 {
+    -webkit-transform: rotateY(180deg) translateZ(200px);
+}
+.y_rot div#i5 {
+    -webkit-transform: rotateY(240deg) translateZ(200px);
+}
+.y_rot div#i6 {
+    -webkit-transform: rotateY(300deg) translateZ(200px);
+}
+.y_rot div img {
+    height:235px;
+    width:235px;
+
+    -webkit-border-radius: 15px;
+    -webkit-transition: .3s;
+}
+
+/* onhover effect */
+.y_rot div#i1:hover,
+.y_rot div#i2:hover,
+.y_rot div#i3:hover,
+.y_rot div#i4:hover,
+.y_rot div#i5:hover,
+.y_rot div#i6:hover {
+    opacity: 1;
+}
+.y_rot div#i1:hover img,
+.y_rot div#i2:hover img,
+.y_rot div#i3:hover img,
+.y_rot div#i4:hover img,
+.y_rot div#i5:hover img,
+.y_rot div#i6:hover  img{
+    height:335px;
+    width:335px;
+    margin-left:-50px;
+    margin-top:-50px;
+}
+
+/* pause main animation onhover */
+.x_rot:hover {
+    -webkit-animation-play-state: paused;
+}
+.y_rot:hover {
+    -webkit-animation-play-state: paused;
+}
