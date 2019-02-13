@@ -95,6 +95,12 @@ function randomRange(min, max) {
 }
 
 var picArray = ["../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
+    "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg",
+    "../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
+    "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg",
+    "../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
+    "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg",
+    "../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
     "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg"
 ];
 
