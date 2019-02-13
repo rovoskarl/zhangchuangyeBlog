@@ -94,7 +94,7 @@ function randomRange(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-var picArray = ["../img/love01.png", "../img/love02.png", "../img/love03.png",
-    "../img/love05.png", "../img/love06.png", "../img/love07.png"
+var picArray = ["../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
+    "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg"
 ];
 
