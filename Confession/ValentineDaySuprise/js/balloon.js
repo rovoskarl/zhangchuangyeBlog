@@ -93,14 +93,18 @@ function randomRange(min, max) {
     // Math.random() 取值在 0 - 1 之间
     return Math.random() * (max - min) + min;
 }
-
-var picArray = ["../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
-    "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg",
-    "../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
-    "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg",
-    "../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
-    "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg",
-    "../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
-    "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg"
-];
+let picArray = [];
+for(var i = 1;i<=19;i++){
+    picArray.push(`../img/whm${i}.jpg`)
+}
+console.log(picArray)
+// var picArray = ["../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
+//     "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg",
+//     "../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
+//     "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg",
+//     "../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
+//     "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg",
+//     "../img/a1.jpg", "../img/a2.jpg", "../img/a3.jpg",
+//     "../img/a4.jpg", "../img/a5.jpg", "../img/a6.jpg","../img/a7.jpg"
+// ];
 
