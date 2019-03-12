@@ -1,0 +1,18 @@
+{
+  "config": {
+    "window": {
+      "navigationBarTitleText": "问卷调查",
+      "navigationBarBackgroundColor": "#ffffff",
+      "navigationBarTextStyle": "black",
+      "pullDownRefresh": false
+    },
+    "tabbar": {
+      "color": "#000000",
+      "selectedColor": "#3399FF",
+      "borderStyle": "black",
+      "backgroudColor": "#ffffff",
+      "list": [
+      ]
+    }
+  }
+}

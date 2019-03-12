@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget appId="e0e4cb0d2b5d41fa857a885262e34699" channelCode="0000" height="480" pid="" sreensize="4.5" version="00.00.0000" viewmode="application" widgetId="" width="320">
+    
+    <name>问卷调查</name>
+    <description/>
+    <author email=""> </author>
+    <icon src="./static/120.png"/>
+    <license href=""/>
+    <content encoding="utf-8" src="index.html"/>
+    <updateurl/>
+    <logserverip/>
+    <showmyspace>false</showmyspace>
+    <obfuscation>true</obfuscation>
+    <bgcolor>#fefefe</bgcolor>
+    <orientation>1</orientation>
+    <debug enable="true" verbose="true">true</debug>
+    <partobfuscation>false</partobfuscation>
+    
+    
+    <config desc="privacyConfig" type="AUTHORITY">
+        <permission info="privacy" platform="iOS" type="camera">
+            <string>拍照需要使用摄像头</string>
+        </permission>
+        <permission info="privacy" platform="iOS" type="photoLibrary">
+            <string>选取图片需要访问相册</string>
+        </permission>
+        <permission info="privacy" platform="iOS" type="microphone">
+            <string>录制语音需要使用麦克风</string>
+        </permission>
+        <permission info="privacy" platform="iOS" type="contact">
+            <string>查找好友需要访问通讯录</string>
+        </permission>
+        <permission info="privacy" platform="iOS" type="locationWhenInUse">
+            <string>需要访问你的位置信息</string>
+        </permission>
+        <permission info="privacy" platform="iOS" type="camera">
+            <string>需要访问你的相机</string>
+        </permission>
+        
+    </config>
+    
+    <webapp/>
+    <config desc="微信跳转码" type="URLSCHEME">
+        <urlScheme name="acWeiXin" schemes="['wxb6c5f9933b1c6ea2','wx']"/>
+    </config>
+    <config desc="QQ跳转码" type="URLSCHEME">
+        <urlScheme name="acQQ" schemes="['tencent1106933547','QQ41eb1139','mqzone']"/>
+    </config>
+    
+    <config desc="高德key" type="KEY">
+        <param name="$acGaodeNavi_appKey$" platform="iOS"
+        value="3a8730bac24c795bfc82104e20e165e6"/>
+        <param name="$acGaodeNaviAppKey$" platform="Android"
+        value="1085d42329a711e9e5026e682ca65599"/>
+    </config>
+    <config desc="友盟key" type="KEY">
+        <param name="$acUMeng_appKey$" platform="iOS" value="58b63a9fe88bad7169003e15"/>
+    </config>
+    <config desc="QQ分享key" type="KEY">
+        <param name="$acQQ_appKey$" platform="iOS" value="1106933547"/>
+    </config>
+    <config desc="微信分享key" type="KEY">
+        <param name="$acWX_appKey$" platform="iOS" value="wxb6c5f9933b1c6ea2"/>
+    </config>
+    <config desc="微信分享secret" type="KEY">
+        <param name="$acWX_secret$" platform="iOS" value="cd2e54f4751bd2a7452f290b770fcd40"/>
+    </config>
+    
+    
+    
+    <config desc="whiteList" type="AUTHORITY">
+        <permission platform="iOS" info="urlSchemeWhiteList">
+            <string>weixin</string>
+            <string>mqq</string>
+            <string>iosamap</string>
+            <string>baidumap</string>
+            <string>wechat</string>
+            <string>weixin</string>
+            <string>sinaweibohd</string>
+            <string>sinaweibo</string>
+            <string>sinaweibosso</string>
+            <string>weibosdk</string>
+            <string>weibosdk2.5</string>
+            <string>mqqapi</string>
+            <string>mqq</string>
+            <string>mqqOpensdkSSoLogin</string>
+            <string>mqqconnect</string>
+            <string>mqqopensdkdataline</string>
+            <string>mqqopensdkgrouptribeshare</string>
+            <string>mqqopensdkfriend</string>
+            <string>mqqopensdkapi</string>
+            <string>mqqopensdkapiV2</string>
+            <string>mqqopensdkapiV3</string>
+            <string>mqqopensdkapiV4</string>
+            <string>mqzoneopensdk</string>
+            <string>wtloginmqq</string>
+            <string>wtloginmqq2</string>
+            <string>mqqwpa</string>
+            <string>mqzone</string>
+            <string>mqzonev2</string>
+            <string>mqzoneshare</string>
+            <string>wtloginqzone</string>
+            <string>mqzonewx</string>
+            <string>mqzoneopensdkapiV2</string>
+            <string>mqzoneopensdkapi19</string>
+            <string>mqzoneopensdkapi</string>
+            <string>mqqbrowser</string>
+            <string>mttbrowser</string>
+            <string>alipay</string>
+            <string>alipayshare</string>
+            <string>ios_goto</string>
+            <string>com.KND.test.-.appStore</string>
+            <string>com.KND.test.-.fotileKetch</string>
+            <string>com.KND.test.-.alpha</string>
+            <string>com.KND.test.-.sunfo</string>
+            <string>com.KND.test.-.JomooPlatform</string>
+            <string>com.KND.demo.huaguo</string>
+            <string>com.KND.demo.yzcrm</string>
+            <string>com.KND.demo.isp</string>
+            <string>com.KND.test.-.pdeam</string>
+            <string>com.KND.test.-.acacleoa</string>
+            <string>com.KND.PD.ykreseller</string>
+            <string>com.KND.test.-.pdbi</string>
+            <string>com.KND.demo.pdpm</string>
+            <string>com.KND.test.-.shopvisit</string>
+            <string>com.KND.test.-.shopsales</string>
+            <string>com.KND.test.-.pdapprove</string>
+            <string>com.KND.demo.lbscheckin</string>
+            <string>com.yuexiu.mpp</string>
+            <string>com.KND.pubcloud</string>
+            <string>999.com.cn</string>
+            <string>com.acacle.appstore.dyw</string>
+            <string>com.KND.test.-.lima.shop</string>
+            <string>com.KND.test.-.jw</string>
+            <string>com.KND.demo.isp</string>
+            <string>com.KND.test.-.huadaoa</string>
+            <string>com.KND.test.-.xinao</string>
+            <string>com.KND.test.-.glodonoa</string>
+            <string>com.KND.test.-.xuanjunlong</string>
+            <string>com.KND.test.-.minaninsoa</string>
+            <string>com.KND.test.-.kimree</string>
+            <string>com.KND.demo.hcrqx0</string>
+            <string>com.KND.test.-.glodon</string>
+            <string>com.KND.demo.pubcloud</string>
+            <string>com.KND.demo.qianzheng</string>
+            <string>cn.szvc.sct</string>
+            <string>com.KND.demo.zb</string>
+            <string>cn.com.crc.cre.leaniphone</string>
+            <string>com.KND.jsdv2</string>
+            <string>com.KND.test.-.lima.sales</string>
+            <string>com.KND.test.-.lima</string>
+            <string>com.gzmetro.link</string>
+        </permission>
+    </config>
+    
+    <config desc="backgroundConfig" type="AUTHORITY">
+        <permission platform="iOS" info="backgroundMode" flag="16"/>
+    </config>
+    
+    <config desc="statusBar" type="STATUSBARSTYLE">
+        <permission platform="iOS" info="statusBarStyle" value="Light"/>
+        <permission platform="iOS" info="statusBarStyleIOS7" value="0"/>
+    </config>
+    
+</widget>
+
