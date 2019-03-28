@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>坐标变换（经纬度 <-> 平面坐标）</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <style>
+        html,body,#container{
+            height:100%;
+            width:100%;
+        }
+        .btn{
+            width:14em;
+            margin-left:3.2rem;  
+            margin-top: 0.8rem; 
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<div class="input-card">
+    <label style='color:grey'>请输入或点击地图获取经纬度：(经度,纬度)</label>
+    <div class="input-item">
+            <div class="input-item-prepend">
+                <span class="input-item-text" >经纬度</span>
+            </div>
+            <input id='lnglat' type="text" value="116.512402,39.867054">
+            
+    </div>
+    <label style='color:grey'>请输入平面地图像素坐标：(x,y)</label>
+    
+    <div class="input-item">
+            <div class="input-item-prepend">
+                <span class="input-item-text">平面坐标</span>
+            </div>
+            <input id='pixel' type="text">
+    </div>
+    <div>
+        <input id="lnglat2pixel" type="button" class="btn" value="经纬度 -> 平面像素坐标" />
+        <input id="pixel2lnglat" type="button" class="btn" value="平面像素坐标 -> 经纬度" />
+    </div>
+</div>
+
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.13&key=f81a5d8522a8cf0fa56bf773676fb210&plugin=AMap.Geocoder"></script>
+<script type="text/javascript">
+    var map = new AMap.Map("container", {
+        resizeEnable: true
+    });
+
+    var $ = function(elementId){
+        return document.getElementById(elementId);
+    };
+    var lnglatInput = $('lnglat');
+    var pixelInput = $('pixel');
+    
+    // 经纬度坐标转成平面像素坐标
+    function lnglat2pixel() {
+        if(!lnglatInput.value) return
+        var zoom = map.getZoom(); 
+        var inputVal = lnglatInput.value.split(',');
+        var lnglat = new AMap.LngLat(inputVal[0], inputVal[1]);
+        var pixel = map.lnglatToPixel(lnglat,zoom);
+        pixel.x = parseInt(pixel.x);
+        pixel.y = parseInt(pixel.y);
+        pixelInput.value = pixel;
+    }
+
+    // 平面像素坐标转成经纬度坐标
+    function pixel2lnglat() {
+        if(!pixelInput.value) return
+        var zoom = map.getZoom(); 
+        var inputVal = pixelInput.value.split(',');
+        var pixel = new AMap.Pixel(inputVal[0],inputVal[1]);
+        var lnglat = map.pixelToLngLat(pixel,zoom);
+        lnglatInput.value = lnglat;
+    }
+    lnglat2pixel();
+    map.on( 'click',  function (e) {
+        lnglatInput.value = e.lnglat.toString();
+    });
+    document.getElementById("lnglat2pixel").onclick = lnglat2pixel;
+    document.getElementById("pixel2lnglat").onclick = pixel2lnglat;
+
+</script>
+</body>
+</html>
