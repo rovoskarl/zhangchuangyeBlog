@@ -6,7 +6,7 @@
     <author email=""> </author>
     <icon src="./static/120.png"/>
     <license href=""/>
-    <content encoding="utf-8" src="index.html"/>
+    <content encoding="utf-8" src="http://www.zhangcy.club/dist/index.html#/"/>
     <updateurl/>
     <logserverip/>
     <showmyspace>false</showmyspace>
