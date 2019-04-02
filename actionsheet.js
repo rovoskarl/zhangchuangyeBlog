@@ -361,7 +361,7 @@ function() {
             try {
                 evt = new window.CustomEvent("tap", {
                     bubbles: true,
-                    cancelable: true
+                    cancelable: false
                 })
             } catch(e) {
                 evt = document.createEvent("Event");
