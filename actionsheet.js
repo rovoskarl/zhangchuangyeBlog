@@ -458,7 +458,9 @@ function() {
         update: function update(buttons) {
             var buttonContainer = this.el.find(".as-buttons");
             buttonContainer.html("");
-            buttons["取消"] = this.hide.bind(this);
+            if(buttons.showCancel){
+                buttons["取消"] = this.hide.bind(this);
+            }
             Object.keys(buttons).forEach(function(key) {
                 var n = buttons[key],
                 btn = tethys(tethys.tpl(buttonTpl, {
