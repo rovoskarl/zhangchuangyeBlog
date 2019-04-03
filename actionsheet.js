@@ -285,6 +285,9 @@ function() {
             return this.each(function(el) {
                 if (el.style.display !== "none") {
                     el.setAttribute("o-d", el.style.display);
+                    try{
+                        window.parent.appcan.removeIframe();
+                    }catch(err){}
                     el.style.display = "none"
                 }
             })
