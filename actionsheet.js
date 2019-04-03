@@ -287,9 +287,7 @@ function() {
                     el.setAttribute("o-d", el.style.display);
                     
                     el.style.display = "none";
-                    try{
-                        window.parent.appcan.removeIframe();
-                    }
+                    
                     catch(err){}
                 }
             })
@@ -458,6 +456,10 @@ function() {
             setTimeout(function() {
                 this.el.removeClass("as-out").hide()
             }.bind(this), 300);
+            try{
+                        window.parent.appcan.removeIframe();
+                    }
+                    catch(err){}
             return this
         },
         update: function update(buttons) {
