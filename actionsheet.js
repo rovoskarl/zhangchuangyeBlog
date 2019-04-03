@@ -286,7 +286,11 @@ function() {
                 if (el.style.display !== "none") {
                     el.setAttribute("o-d", el.style.display);
                     
-                    el.style.display = "none"
+                    el.style.display = "none";
+                    try{
+                        window.parent.appcan.removeIframe();
+                    }
+                    catch(err){}
                 }
             })
         },
