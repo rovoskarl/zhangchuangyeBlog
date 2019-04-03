@@ -287,8 +287,7 @@ function() {
                     el.setAttribute("o-d", el.style.display);
                     
                     el.style.display = "none";
-                    
-                    catch(err){}
+        
                 }
             })
         },
