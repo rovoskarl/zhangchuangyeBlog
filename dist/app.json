@@ -1,7 +1,7 @@
 {
   "config": {
     "window": {
-      "navigationBarTitleText": "问卷调查",
+      "navigationBarTitleText": "AppCan官方组件展示",
       "navigationBarBackgroundColor": "#ffffff",
       "navigationBarTextStyle": "black",
       "pullDownRefresh": false
@@ -12,6 +12,18 @@
       "borderStyle": "black",
       "backgroudColor": "#ffffff",
       "list": [
+        {
+          "pagePath": "/",
+          "iconPath": "./static/1-2.png",
+          "selecedIconPath": "./static/1.png",
+          "text": "组件"
+        },
+        {
+          "pagePath": "/ACAPI",
+          "iconPath": "./static/2-2.png",
+          "selecedIconPath": "./static/2.png",
+          "text": "接口"
+        }
       ]
     }
   }
