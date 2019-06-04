@@ -1,0 +1,30 @@
+{
+  "config": {
+    "window": {
+      "navigationBarTitleText": "AppCan官方组件展示",
+      "navigationBarBackgroundColor": "#ffffff",
+      "navigationBarTextStyle": "black",
+      "pullDownRefresh": false
+    },
+    "tabBar": {
+      "color": "#000000",
+      "selectedColor": "#3399FF",
+      "borderStyle": "black",
+      "backgroundColor": "#ffffff",
+      "list": [
+        {
+          "pagePath": "pages/ACIndex",
+          "iconPath": "./static/1-2.png",
+          "selectedIconPath": "./static/1.png",
+          "text": "组件"
+        },
+        {
+          "pagePath": "pages/ACAPIindex",
+          "iconPath": "./static/2-2.png",
+          "selectedIconPath": "./static/2.png",
+          "text": "接口"
+        }
+      ]
+    }
+  }
+}

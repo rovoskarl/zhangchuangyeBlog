@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget appId="e0e4cb0d2b5d41fa857a885262e34699" channelCode="0000" height="480" pid="" sreensize="4.5" version="00.00.0000" viewmode="application" widgetId="" width="320">
+
+    <name>demo</name>
+    <description/>
+    <author email=""> </author>
+    <icon src="./static/120.png"/>
+    <license href=""/>
+    <content encoding="utf-8" src="index.html"/>
+    <updateurl/>
+    <logserverip/>
+    <bgcolor>#fefefe</bgcolor>
+    <orientation>1</orientation>
+    <debug enable="true" verbose="true">true</debug>
+    <config desc="backgroundConfig" type="AUTHORITY">
+        <permission platform="iOS" info="backgroundMode" flag="16"/>
+    </config>
+
+    <config desc="statusBar" type="STATUSBARSTYLE">
+        <permission platform="iOS" info="statusBarStyle" value="Light"/>
+        <permission platform="iOS" info="statusBarStyleIOS7" value="0"/>
+    </config>
+
+</widget>
